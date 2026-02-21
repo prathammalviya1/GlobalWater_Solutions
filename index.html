@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalWater Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- ===== HOME DASHBOARD ===== -->
+
+    <div class="header">
+        <div>
+            <h1>Good Morning, Pratham</h1>
+            <p class="status-text">All systems operating normally</p>
+        </div>
+
+        <div class="notification">
+            🔔
+            <span class="notification-dot"></span>
+        </div>
+    </div>
+
+    <!-- ===== SECTION 3: PRIMARY DEVICE HEALTH CARD ===== -->
+
+    <div class="card device-health-card">
+        <div class="device-header">
+            <h2>Kitchen RO Device</h2>
+            <span class="health-badge">Healthy</span>
+        </div>
+
+        <p class="device-subtext">Purification running smoothly</p>
+
+        <div class="health-stats">
+            <div>
+                <p class="stat-value">98%</p>
+                <p class="stat-label">Water Purity</p>
+            </div>
+            <div>
+                <p class="stat-value">76%</p>
+                <p class="stat-label">Filter Life</p>
+            </div>
+            <div>
+                <p class="stat-value">120</p>
+                <p class="stat-label">TDS (ppm)</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- ===== QUICK ACTIONS ===== -->
+
+<div class="quick-actions">
+    <div class="action-card">
+        <span>🚿</span>
+        <p>Start Flush</p>
+    </div>
+
+    <div class="action-card">
+        <span>🔒</span>
+        <p>Lock Device</p>
+    </div>
+
+    <div class="action-card">
+        <span>📊</span>
+        <p>View Reports</p>
+    </div>
+
+    <div class="action-card">
+        <span>⚙️</span>
+        <p>Settings</p>
+    </div>
+</div>
+<!-- ===== BOTTOM NAVIGATION ===== -->
+
+<div class="bottom-nav">
+    <div class="nav-item active">
+        <span>🏠</span>
+        <p>Home</p>
+    </div>
+
+    <div class="nav-item">
+        <span>💧</span>
+        <p>Device</p>
+    </div>
+
+    <div class="nav-item">
+        <span>⚠️</span>
+        <p>Alerts</p>
+    </div>
+
+    <div class="nav-item">
+        <span>🛡️</span>
+        <p>Plans</p>
+    </div>
+</div>
+<!-- ===================================== -->
+<!-- ===== SCREEN 2: DEVICE DASHBOARD ===== -->
+<!-- ===================================== -->
+
+<div class="device-dashboard">
+
+    <div class="device-top-bar">
+        <span class="back-arrow">←</span>
+        <h2>Kitchen RO Device</h2>
+    </div>
+
+    <!-- ===== PURIFICATION STATUS ===== -->
+
+<div class="purification-card">
+    <div class="circle-wrapper">
+        <div class="circle">
+            <span>75%</span>
+        </div>
+    </div>
+    <h3>Purification Cycle</h3>
+    <p>Currently processing water</p>
+</div>
+
+<!-- ===== DEVICE METRICS ROW ===== -->
+
+<div class="device-metrics">
+    <div class="metric-box">
+        <h4>Flow Rate</h4>
+        <p>1.2 L/min</p>
+    </div>
+
+    <div class="metric-box">
+        <h4>Pressure</h4>
+        <p>Stable</p>
+    </div>
+
+    <div class="metric-box">
+        <h4>TDS</h4>
+        <p>120 ppm</p>
+    </div>
+</div>
+<!-- ===== SMART CONTROLS ===== -->
+
+<div class="controls-card">
+    <h3>Smart Controls</h3>
+
+    <div class="control-item">
+        <span>Valve Control</span>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="control-item">
+        <span>Holiday Mode</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="control-item">
+        <span>Leakage Protection</span>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<!-- ===== FILTER STATUS ===== -->
+
+<div class="filter-card">
+    <div class="filter-info">
+        <h4>Filter Life</h4>
+        <p>76% remaining</p>
+        <span>Replace in approximately 45 days</span>
+    </div>
+</div>
+
+<!-- ===== LAST SYNC ===== -->
+
+<div class="sync-info">
+    Last synced 2 minutes ago
+</div>
+
+</div>
+<!-- ===================================== -->
+<!-- ===== SCREEN 3: CRITICAL LEAK ALERT ===== -->
+<!-- ===================================== -->
+
+<div class="leak-alert">
+
+    <div class="alert-icon">💧</div>
+
+    <h2>Leak Detected</h2>
+    <p class="alert-message">
+        Don't worry. The safety valve has been automatically closed.
+    </p>
+
+    <div class="incident-card">
+        <p><strong>Location:</strong> Kitchen RO</p>
+        <p><strong>Time:</strong> 02:14 AM</p>
+        <p><strong>Valve Status:</strong> Closed</p>
+        <p><strong>Water Flow:</strong> Stopped</p>
+    </div>
+
+    <button class="btn-primary">Open Controls</button>
+    <button class="btn-secondary">Contact Support</button>
+
+</div>
+
+<!-- ===================================== -->
+<!-- ===== SCREEN 4: PROTECTION PLANS ===== -->
+<!-- ===================================== -->
+
+<div class="plans-section">
+
+    <h2>Protect Your Device</h2>
+    <p class="plans-subtext">
+        Stay worry-free with smart protection plans.
+    </p>
+
+    <!-- PLAN 1 -->
+    <div class="plan-card">
+        <h3>Basic Care</h3>
+        <p class="price">₹199/month</p>
+        <ul>
+            <li>✔ Annual filter check</li>
+            <li>✔ Remote diagnostics</li>
+            <li>✔ Leak monitoring</li>
+        </ul>
+    </div>
+
+    <!-- PLAN 2 -->
+    <div class="plan-card highlight">
+        <h3>Complete Protection</h3>
+        <p class="price">₹399/month</p>
+        <ul>
+            <li>✔ All Basic benefits</li>
+            <li>✔ Free filter replacement</li>
+            <li>✔ Priority support</li>
+            <li>✔ Extended warranty</li>
+        </ul>
+    </div>
+
+    <button class="btn-primary">Choose Plan</button>
+
+    <div class="trust-strip">
+        Cancel anytime • Secure payments • 24/7 Support
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>

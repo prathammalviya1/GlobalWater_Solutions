@@ -1,0 +1,551 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F5F7FA;  /* light neutral background */
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* ===== APP CONTAINER ===== */
+.app-container {
+    width: 390px;
+    background: #FFFFFF;
+    padding: 24px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== COLOR VARIABLES ===== */
+:root {
+    --primary-blue: #0B3D91;
+    --light-blue: #E8F0FF;
+    --text-dark: #1A1A1A;
+    --text-light: #6B7280;
+    --card-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+    --radius: 12px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1 {
+    font-size: 22px;
+    color: var(--text-dark);
+}
+
+h2 {
+    font-size: 18px;
+    color: var(--text-dark);
+}
+
+p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* ===== REUSABLE CARD ===== */
+.card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.btn-primary {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: var(--radius);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ===== SECONDARY BUTTON ===== */
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 14px;
+    width: 100%;
+    border-radius: var(--radius);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.status-text {
+    margin-top: 4px;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+/* ===== NOTIFICATION ===== */
+.notification {
+    position: relative;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+}
+
+
+
+/* ===== DEVICE HEALTH CARD ===== */
+
+.device-health-card {
+    border: 1px solid #F0F2F5;
+}
+
+.device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.health-badge {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.device-subtext {
+    margin-bottom: 16px;
+}
+
+/* ===== HEALTH STATS ===== */
+
+.health-stats {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.stat-label {
+    font-size: 12px;
+    margin-top: 4px;
+    color: var(--text-light);
+}
+
+/* ===== QUICK ACTIONS ===== */
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.action-card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.action-card span {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.action-card p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== BOTTOM NAVIGATION ===== */
+
+.bottom-nav {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.nav-item {
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.nav-item span {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.nav-item p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.nav-item.active p,
+.nav-item.active span {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* ===== DEVICE DASHBOARD ===== */
+
+.device-dashboard {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid #E5E7EB;
+}
+
+.device-top-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.back-arrow {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* ===== PURIFICATION CARD ===== */
+
+.purification-card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Circle Progress */
+.circle-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary-blue) 75%,
+        #E5E7EB 75%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.circle span {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.purification-card h3 {
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+.purification-card p {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* ===== DEVICE METRICS ===== */
+
+.device-metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.metric-box {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 16px;
+    text-align: center;
+}
+
+.metric-box h4 {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.metric-box p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* ===== SMART CONTROLS ===== */
+
+.controls-card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.controls-card h3 {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E5E7EB;
+    border-radius: 34px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-blue);
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/* ===== FILTER CARD ===== */
+
+.filter-card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.filter-info h4 {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.filter-info p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 4px;
+}
+
+.filter-info span {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* ===== SYNC INFO ===== */
+
+.sync-info {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+/* ===== LEAK ALERT SCREEN ===== */
+
+.leak-alert {
+    margin-top: 50px;
+    padding-top: 32px;
+    border-top: 2px solid #E5E7EB;
+    text-align: center;
+}
+
+.leak-alert h2 {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.alert-icon {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+
+.alert-message {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.incident-card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.incident-card p {
+    margin-bottom: 6px;
+}
+
+/* ===== PROTECTION PLANS ===== */
+
+.plans-section {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 2px solid #E5E7EB;
+    text-align: center;
+}
+
+.plans-subtext {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+.plan-card {
+    background: #FFFFFF;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.plan-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-card li {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+.plan-card.highlight {
+    border: 2px solid var(--primary-blue);
+}
+
+.trust-strip {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 14px;
+}
+
+.plan-card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+}
